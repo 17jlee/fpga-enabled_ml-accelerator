@@ -1,7 +1,7 @@
 # Keras model accelerator targetting Amazon F2 built with hls4ml
 
 ## Overview
-This repository showcases an end-to-end **hls4ml** workflow that converts a tiny TensorFlow/Keras classifier into a Vitis HLS project ready for FPGA synthesis. The driver script `quick_demo.py` builds the neural network, tweaks the generated HLS configuration to favour resource usage, and launches the hls4ml conversion flow.
+This repository showcases an end-to-end **hls4ml**[^1] workflow that converts a tiny TensorFlow/Keras classifier into a Vitis HLS project ready for FPGA synthesis. The driver script `quick_demo.py` builds the neural network, tweaks the generated HLS configuration to favour resource usage, and launches the hls4ml conversion flow.
 
 The generated project (`my_hls_prj/`) contains synthesizable C++ firmware (`firmware/`), weight headers, TCL helpers, and a full Vitis HLS workspace (`myproject_prj/`) with C-simulation and synthesis reports.
 
@@ -82,17 +82,4 @@ hls_model.build(csim=True, synth=False, cosim=False, export=False)
 - Integrate dataset loading and training before conversion to synthesize learned weights.
 - Extend the TCL scripts (`build_prj.tcl`, `vivado_synth.tcl`) to automate RTL export or Vivado synthesis.
 
-## Citation
-If you use this repository or the generated artifacts in academic work, please cite hls4ml:
-
-```
-@software{fastml_hls4ml,
-   author       = {{FastML Team}},
-   title        = {fastmachinelearning/hls4ml},
-   year         = 2025,
-   publisher    = {Zenodo},
-   version      = {v1.1.0},
-   doi          = {10.5281/zenodo.1201549},
-   url          = {https://github.com/fastmachinelearning/hls4ml}
-}
-```
+[^1]: FastML Team. *fastmachinelearning/hls4ml*. Zenodo, 2025. Version v1.1.0. doi:[10.5281/zenodo.1201549](https://doi.org/10.5281/zenodo.1201549). [https://github.com/fastmachinelearning/hls4ml](https://github.com/fastmachinelearning/hls4ml)
