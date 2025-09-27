@@ -78,8 +78,7 @@ hls_model.build(csim=True, synth=False, cosim=False, export=False)
 ```
 
 ## Next steps
-- Experiment with deeper/wider Keras models and observe the effect on resource utilization.
-- Integrate dataset loading and training before conversion to synthesize learned weights.
+- Experiment with deeper/wider Keras models and observe the effect on resource utilisation.
 - Extend the TCL scripts (`build_prj.tcl`, `vivado_synth.tcl`) to automate RTL export or Vivado synthesis.
 
 [^1]: FastML Team. *fastmachinelearning/hls4ml*. Zenodo, 2025. Version v1.1.0. doi:[10.5281/zenodo.1201549](https://doi.org/10.5281/zenodo.1201549). [https://github.com/fastmachinelearning/hls4ml](https://github.com/fastmachinelearning/hls4ml)
