@@ -1,4 +1,4 @@
-# hls4ml Quick Demo
+# Keras model accelerator targetting Amazon F2 built with hls4ml
 
 ## Overview
 This repository showcases an end-to-end **hls4ml** workflow that converts a tiny TensorFlow/Keras classifier into a Vitis HLS project ready for FPGA synthesis. The driver script `quick_demo.py` builds the neural network, tweaks the generated HLS configuration to favour resource usage, and launches the hls4ml conversion flow.
