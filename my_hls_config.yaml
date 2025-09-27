@@ -1,0 +1,32 @@
+LayerName:
+  dense:
+    Precision: ap_fixed<12,4>
+    ReuseFactor: 8
+    Trace: false
+  dense_out:
+    Precision: ap_fixed<12,4>
+    ReuseFactor: 8
+    Strategy: Stable
+    TableSize: 1024
+    Trace: false
+    exp_table_t: ap_fixed<18,8>
+    inv_table_t: ap_fixed<18,8>
+  dense_out_softmax:
+    Precision: ap_fixed<12,4>
+    ReuseFactor: 8
+    Trace: false
+  dense_relu:
+    Precision: ap_fixed<12,4>
+    ReuseFactor: 8
+    Trace: false
+  input_layer:
+    Precision:
+      result: auto
+    Trace: false
+Model:
+  BramFactor: 1000000000
+  Precision:
+    default: fixed<16,6>
+  ReuseFactor: 1
+  Strategy: Resource
+  TraceOutput: false
